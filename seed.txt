@@ -1,0 +1,32 @@
+/*package main
+
+import (
+	"time"
+
+	"github.com/mercadolibre/fury_sodexo-conciliation/src/api/dao"
+	"github.com/mercadolibre/fury_sodexo-conciliation/src/api/models"
+	"github.com/mercadolibre/go-meli-toolkit/goutils/logger"
+)
+
+type ISeed interface {
+	populate() error
+}
+
+type Seed struct {
+	Kvs dao.IKVSClient
+}
+
+func (seedStruct *Seed) populate() error {
+	seeds := []models.Execution{
+		{ID: "EXE_0e694288A3f33A41dbAb057A6e8a7c1397ae", Date: time.Now()},
+	}
+
+	for _, seed := range seeds {
+		if err := seedStruct.Kvs.Save(seed.ID, seed); err != nil {
+			logger.Error("There was an error saving params and execution id", err)
+			return err
+		}
+	}
+	logger.Info("Finish populate KVS")
+	return nil
+}*/
